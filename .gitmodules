@@ -1,0 +1,9 @@
+[submodule "ip"]
+	path = ip
+	url = https://github.com/Apachh/scr1_saylinx.git
+[submodule "ip/amba"]
+	path = ip/amba
+	url = https://github.com/tom-urkin/AMBA.git
+[submodule "ip/scr1"]
+	path = ip/scr1
+	url = https://github.com/syntacore/scr1.git
