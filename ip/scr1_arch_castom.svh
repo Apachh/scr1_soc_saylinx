@@ -16,7 +16,7 @@
 `define SCR1_ARCH_CUSTOM
 
 // `define SCR1_DBG_EN
-`undef SCR1_TCM_EN
+// `undef SCR1_TCM_EN
 
 parameter bit [`SCR1_XLEN-1:0]          SCR1_ARCH_RST_VECTOR        = 'hFFFFFF00;   // Reset vector
 parameter bit [`SCR1_XLEN-1:0]          SCR1_ARCH_MTVEC_BASE        = 'hFFFFFF80;   // MTVEC BASE field reset value

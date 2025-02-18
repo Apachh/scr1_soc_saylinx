@@ -36,7 +36,7 @@
 #
 # -------------------------------------------------------------------------- #
 
-
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 14
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6F17I7
 set_global_assignment -name TOP_LEVEL_ENTITY saylinx_scr1
@@ -48,4 +48,42 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SEARCH_PATH ip/scr1/src/includes
+set_global_assignment -name SEARCH_PATH ip
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_top_ahb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_timer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_tcm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_imem_router.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_imem_ahb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_dp_memory.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_dmem_router.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_dmem_ahb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_tapc_synchronizer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_tapc_shift_reg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_tapc.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_scu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_dmi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_dm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_core_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/scr1_clk_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/primitives/scr1_reset_cells.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/primitives/scr1_cg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_tracelog.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_tdu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_mprf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_lsu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_ifu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_idu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_ialu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_hdu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_exu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_pipe_csr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/core/pipeline/scr1_ipic.sv
 set_global_assignment -name SYSTEMVERILOG_FILE saylinx_scr1.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
