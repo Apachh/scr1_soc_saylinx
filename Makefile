@@ -23,16 +23,17 @@ SYNTH_FILES =  \
 	$(wildcard ip/scr1/src/core/pipeline/*.sv) \
 	$(wildcard ip/scr1/src/core/primitives/*.sv) \
 	$(wildcard ip/scr1/src/core/*.sv) \
+	$(wildcard ip/uart16550/rtl/verilog/*.v) \
+	$(wildcard ip/ahb-2-wishbone/src/*.v) \
 	$(AHB_SYNTH_FILES) 
 
 LIB_DIRS = \
 	ip \
-	ip/scr1/src/includes \
+	ip/scr1/src/includes 
 
-
-	# bash $(QUARTUS_BIN_DIR)/quartus_map $(PROJECT_NAME)
+	
 all:
-	bash $(QUARTUS_BIN_DIR)/quartus_sh --create_project $(PROJECT_NAME) --overwrite -- part $(FPGA_DEVICE)
+	bash $(QUARTUS_BIN_DIR)/quartus_map $(PROJECT_NAME)
 
 	
 

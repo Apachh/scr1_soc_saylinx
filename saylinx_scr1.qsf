@@ -55,6 +55,11 @@ set_global_assignment -name SEARCH_PATH ip/scr1/src/includes
 set_global_assignment -name SEARCH_PATH ip
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE ip/roalogic_ahb3_lite/submodules/ahb3lite_pkg/rtl/verilog/ahb3lite_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/roalogic_ahb3_lite/rtl/verilog/ahb3lite_interconnect_slave_priority.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/roalogic_ahb3_lite/rtl/verilog/ahb3lite_interconnect_slave_port.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/roalogic_ahb3_lite/rtl/verilog/ahb3lite_interconnect_master_port.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ip/roalogic_ahb3_lite/rtl/verilog/ahb3lite_interconnect.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_top_ahb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_timer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ip/scr1/src/top/scr1_tcm.sv

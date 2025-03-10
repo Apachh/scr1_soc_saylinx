@@ -7,3 +7,18 @@
 [submodule "ip/scr1"]
 	path = ip/scr1
 	url = https://github.com/syntacore/scr1.git
+[submodule "ip/roalogic_ahb3_lite"]
+	path = ip/roalogic_ahb3_lite
+	url = https://github.com/RoaLogic/ahb3lite_interconnect.git
+[submodule "ip/wishbone-ahb3lite"]
+	path = ip/wishbone-ahb3lite
+	url = https://github.com/vfinotti/ahb3lite_wb_bridge.git
+[submodule "ip/wishbone-2-ahb"]
+	path = ip/wishbone-2-ahb
+	url = https://github.com/freecores/wisbone_2_ahb.git
+[submodule "ip/uart16550"]
+	path = ip/uart16550
+	url = https://github.com/freecores/uart16550.git
+[submodule "ip/ahb-2-wishbone"]
+	path = ip/ahb-2-wishbone
+	url = https://github.com/freecores/ahb2wishbone.git
