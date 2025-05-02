@@ -1,5 +1,5 @@
 
-PROJECT_NAME = saylinx_scr1_ZZZ
+PROJECT_NAME = saylinx_scr1
 
 QUARTUS_BIN_DIR = ~/intelFPGA_lite/21.1/quartus/bin/
 # QUARTUS_MAP = ./intelFPGA_lite/21.1/quartus/bin/quartus_map
